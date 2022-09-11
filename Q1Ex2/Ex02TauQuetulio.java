@@ -1,14 +1,9 @@
 package ex02tauquetulio;
 
-/**
- *
- * @author TAU - Marra Alliyaj Nicole Quetulio
- */
+// @author TAU - Marra Alliyaj Nicole Quetulio
+
 import java.util.Scanner;
 public class Ex02TauQuetulio {
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         boolean isPlaying = true;
         Scanner sc = new Scanner(System.in);
