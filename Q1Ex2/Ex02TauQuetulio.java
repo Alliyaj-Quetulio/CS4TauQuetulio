@@ -29,7 +29,7 @@ public class Ex02TauQuetulio {
                         System.out.print("Out of range. ");
                     }
                     else if (guess == random) {
-                        System.out.print("You got it! \n");
+                        System.out.print("\nYou got it! \n");
                         num = 0;
                     }
                     else if (guess > random && num > 1) {
@@ -39,11 +39,11 @@ public class Ex02TauQuetulio {
                         System.out.print("Guess higher! ");
                     }
                     else if (num == 1){
-                         System.out.printf("You ran out of guesses. The answer was %s. Game over! \n", random);
+                         System.out.printf("\nYou ran out of guesses. The answer was %s. Game over! \n", random);
                         num = 0;
                     }
                 }
-                System.out.print("Play again (y/n)? ");
+                System.out.print("\nPlay again (y/n)? ");
                 String play = sc.next();
                 System.out.print("\n");
                 String leftover = sc.nextLine();
