@@ -4,22 +4,18 @@ public class Exercise06tauquetuliomarraalliyajnicole {
 
     public static void main(String[] args) {
         
-        FireType reese = new FireType("Reese", 20, 5);
-        GrassType sheena = new GrassType("Sheena", 20, 5);
-        WaterType anika = new WaterType("Anika", 20, 5);
+        FireType reese = new FireType("Reese", 50, 40);
+        GrassType sheena = new GrassType("Sheena", 50, 40);
+        WaterType anika = new WaterType("Anika", 50, 40);
         
         boolean fight = true;
-
-        //Monster reese = new Monster("Reese", "fire", "grass", "water", 20, 5);
-        //Monster sheena = new Monster("Sheena", "grass", "water", "fire", 20, 5);
-        // Monster anika = new Monster("Anika", "water", "fire", "grass", 20, 5);
         
         reese.introduce();
         sheena.introduce();
         anika.introduce();
         
         System.out.println();
-        System.out.println("Battle 1: Grass vs. Fire");
+        System.out.println("[Battle 1: Grass vs. Fire]");
         while (fight) {
             sheena.attack(reese);
             if (reese.getHP() == 0) {
@@ -31,10 +27,12 @@ public class Exercise06tauquetuliomarraalliyajnicole {
                 fight = false;
             }
         }
+        sheena.restoreHealth();
+        reese.restoreHealth();
         
         fight = true;
         System.out.println();
-        System.out.println("Battle 1: Fire vs. Water");
+        System.out.println("[Battle 2: Fire vs. Water]");
         while (fight) {
             reese.attack(anika);
             if (anika.getHP() == 0) {
@@ -46,8 +44,24 @@ public class Exercise06tauquetuliomarraalliyajnicole {
                 fight = false;
             }
         }
+        reese.restoreHealth();
+        anika.restoreHealth();
         
-        
+        fight = true;
+        System.out.println();
+        System.out.println("[Battle 3: Water vs. Grass]");
+        while (fight) {
+            anika.attack(sheena);
+            if (sheena.getHP() == 0) {
+                fight = false;
+                break;
+            }
+            sheena.attack(anika);
+            if (anika.getHP() == 0) {
+                fight = false;
+            }
+        }
+        anika.restoreHealth();
+        sheena.restoreHealth();      
     }
-    
 }
