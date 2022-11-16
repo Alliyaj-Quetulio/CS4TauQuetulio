@@ -2,8 +2,8 @@ package exercise06tauquetuliomarraalliyajnicole;
 import java.util.ArrayList;
 
 public class Monster {
-    protected String name, type, strongAgainst, weakAgainst; // changed to protected and removed final
-    protected int maxHP, hp, atk, def, xp, lvl; // changed to protected and double
+    protected final String name, type, strongAgainst, weakAgainst;     // changed the access modifier from private to protected
+    protected int maxHP, hp, atk, def, xp, lvl;     // changed the access modifier from private to protected 
     private static ArrayList<Monster> monsterList = new ArrayList<>();
 
     public Monster(String n, String t, String s, String w, int m, int base){
@@ -21,17 +21,16 @@ public class Monster {
     public String getName() {
         return name;
     }
-    // from int to double
-    public double getMaxHP() {
+    public int getMaxHP() {
         return maxHP;
     }
-    public double getHP() {
+    public int getHP() {
         return hp;
     }
-    public double getAtk() {
+    public int getAtk() {
         return atk;
     }
-    public double getDef() {
+    public int getDef() {
         return def;
     }
     public static ArrayList<Monster> getMonsterList() {
@@ -70,7 +69,7 @@ public class Monster {
         hp = maxHP;
     }
     
-    public void introduce() {
-        System.out.printf("A new %s type named %s has been added. %n", type, name);
+    public void introduce() {     // used to introduce a newly added Monster
+        System.out.printf("A new %s type named '%s' has been created. %n", type, name);
     }
 }
