@@ -9,5 +9,6 @@ public class GrassType extends Monster {
     @Override
     public void special() {
         hp += (maxHP*0.20);
+        System.out.printf("%s did a pose, increasing it to %sHP. %n", name, getHP());
     }
 }
