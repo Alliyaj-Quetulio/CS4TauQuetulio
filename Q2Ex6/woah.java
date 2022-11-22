@@ -94,6 +94,9 @@ public class NPC extends Character {
         super(n, l);
         this.dialog = d;
     }
+    public void interact() {
+        System.out.println("Hi!");
+    }
 }
 
 // AAAAAAAAAAAAAAAAAAAA
@@ -129,5 +132,13 @@ public class Location {
     public void removePerson(Character c){
         personList.remove(c);
     }
+}
+
+// AAAAAAAAAAAAAAAAAAAA
+
+package exercise06tauquetuliomarraalliyajnicole;
+
+public interface Interactive {
+    void interact();
 }
 
