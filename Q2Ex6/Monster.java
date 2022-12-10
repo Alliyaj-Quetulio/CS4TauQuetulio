@@ -1,7 +1,7 @@
-package exercise06tauquetuliomarraalliyajnicole;
+package exercise07tauquetuliomarraalliyajnicole;
 import java.util.ArrayList;
 
-public class Monster {
+public abstract class Monster implements Interactive {
     protected final String name, type, strongAgainst, weakAgainst;     // changed the access modifier from private to protected
     protected int maxHP, hp, atk, def, xp, lvl;     // changed the access modifier from private to protected 
     private static ArrayList<Monster> monsterList = new ArrayList<>();
@@ -61,15 +61,14 @@ public class Monster {
         }
     }
 
-    public void special(){
-        System.out.println(name + " did a pose.");
-    }
-
+    public abstract void special();
     public void restoreHealth(){
         hp = maxHP;
     }
-    
     public void introduce() {     // used to introduce a newly added Monster
         System.out.printf("A new %s type named '%s' has been created. %n", type, name);
+    }
+    public void interact() {
+        System.out.printf("Name: %s %nType: %s %n", name, type);
     }
 }
