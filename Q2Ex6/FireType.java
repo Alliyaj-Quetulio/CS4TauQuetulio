@@ -1,4 +1,4 @@
-package exercise06tauquetuliomarraalliyajnicole;
+package exercise07tauquetuliomarraalliyajnicole;
 
 public class FireType extends Monster {
     
