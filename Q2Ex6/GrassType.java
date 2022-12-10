@@ -1,4 +1,4 @@
-package exercise06tauquetuliomarraalliyajnicole;
+package exercise07tauquetuliomarraalliyajnicole;
 
 public class GrassType extends Monster {
     
@@ -10,5 +10,10 @@ public class GrassType extends Monster {
     public void special() {
         hp += (maxHP*0.20);
         System.out.printf("%s did a pose, increasing it to %sHP. %n", name, getHP());
+    }
+    
+    public void rest() {
+        hp += (maxHP*0.50);
+        System.out.printf("%s rested, restoring it to %sHP. %n", name, getHP());
     }
 }
